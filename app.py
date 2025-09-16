@@ -17,6 +17,7 @@ app = FastAPI()
 # ✅ Allow requests from your frontend domain
 origins = [
     "https://cognifood.ecostructinnovators.unaux.com",  # your frontend
+    "http://cognifood.ecostructinnovators.unaux.com",
     "http://localhost:8000",  # local testing
 ]
 
@@ -65,3 +66,4 @@ def predict(data: FoodItem):
         "storage": data.storage,
         "predicted_shelf_life_days": float(predicted_shelf_life)
     }
+
